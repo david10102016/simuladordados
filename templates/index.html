@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simulador de Dados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        header, footer {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        header {
+            background-color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            margin-top: auto;
+        }
+        h1 { margin: 0; }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 400px;
+            height: auto;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 2px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(0,0,0,0.3);
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulador de Dados</h1>
+    </header>
+
+    <main>
+        <img id="dado-img" src="" alt="Resultado del Dado" />
+        <h2 id="resultado-texto"></h2>
+
+        <h3>Historial de tiradas:</h3>
+        <ul id="historial"></ul>
+
+        <input type="text" id="nombre-jugador" placeholder="Ingresa tu nombre" />
+        <button id="lanzar-btn">Lanzar Dado</button>
+    </main>
+
+    <footer>
+        <p>© 2025 JD | <a href="https://www.youtube.com/@jdav777" target="_blank">Mi Canal de YouTube</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
